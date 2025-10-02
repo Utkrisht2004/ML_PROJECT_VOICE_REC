@@ -1,0 +1,62 @@
+#REMEMBER TO CONVERT THIS FILE TO PYTHON IF YOU WANT TO RUN
+
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load dataset
+tips = sns.load_dataset("tips")
+
+# ----- Dataset Summary -----
+print("Rows & Columns:", tips.shape)
+print("\nData Types:\n", tips.dtypes)
+print("\nFirst 5 rows:\n", tips.head())
+
+# ----- Basic Statistics -----
+desc = tips.describe(include="all")
+print("\nBasic Statistics:\n", desc)
+
+# Mean, Median, Mode, Range, Std
+for col in ["total_bill", "tip", "size"]:
+    print(f"\nColumn: {col}")
+    print("Mean:", tips[col].mean())
+    print("Median:", tips[col].median())
+    print("Mode:", tips[col].mode()[0])
+    print("Min:", tips[col].min())
+    print("Max:", tips[col].max())
+    print("Range:", tips[col].max() - tips[col].min())
+    print("Std Dev:", tips[col].std())
+
+# ----- Visualizations -----
+
+# 1. Histogram of Total Bill
+plt.figure(figsize=(6,4))
+sns.histplot(tips["total_bill"], bins=20, kde=True)
+plt.title("Distribution of Total Bill")
+plt.show()
+
+# 2. Bar Chart: Avg Tip by Day
+plt.figure(figsize=(6,4))
+sns.barplot(x="day", y="tip", data=tips, estimator=np.mean)
+plt.title("Average Tip by Day")
+plt.show()
+
+# 3. Pie Chart: Gender Distribution
+gender_counts = tips["sex"].value_counts()
+plt.figure(figsize=(5,5))
+plt.pie(gender_counts, labels=gender_counts.index, autopct="%1.1f%%", startangle=90)
+plt.title("Gender Proportion")
+plt.show()
+
+# 4. Boxplot: Tips by Smoker
+plt.figure(figsize=(6,4))
+sns.boxplot(x="smoker", y="tip", data=tips)
+plt.title("Tips by Smoker/Non-Smoker")
+plt.show()
+
+# 5. Scatter Plot: Total Bill vs Tip
+plt.figure(figsize=(6,4))
+sns.scatterplot(x="total_bill", y="tip", data=tips)
+plt.title("Total Bill vs Tip")
+plt.show()

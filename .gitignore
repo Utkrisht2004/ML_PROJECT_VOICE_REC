@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Virtual environment
+venv/
+.env/
+*.env
+
+# IDE configs
+.vscode/
+.idea/
+
+# Vosk models (too large for git)
+vosk-model-*/
+model/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Build / dist
+build/
+dist/
+*.egg-info/
