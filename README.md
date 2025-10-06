@@ -1,7 +1,7 @@
 # Voice Command Control (English)
 
 This project allows you to control your laptop using **voice commands in English**.  
-It uses the [Vosk](https://alphacephei.com/vosk/) speech recognition library and Python.
+It uses the [Whisper](https://openai.com/index/whisper/) speech recognition library and Python.
 
 ---
 
