@@ -58,7 +58,7 @@ voice-control/
 
 ## Future Work
 
-- Add Hindi support using Vosk Hindi model.
-- Add Whisper integration for improved accuracy.
+- Add multi-language support.
+- Add voice automation for program development.
 - Extend command set with NLP-based intent detection.
 - Dockerize the app for portability.
