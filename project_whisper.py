@@ -30,10 +30,10 @@ def callback(indata, frames, time, status):
 
 def execute_command(text):
     """Simple command mapping"""
-    if "browser" in text:
+    if "is" in text:
         print("✅ Opening Chrome...")
         os.system("start chrome")
-    elif "notepad" in text:
+    elif "and" in text:
         print("✅ Opening Notepad...")
         os.system("notepad")
     elif "calculator" in text:
