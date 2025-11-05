@@ -1,3 +1,9 @@
 vosk==0.3.45
 sounddevice==0.4.6
 numpy>=1.23.0
+pyaudio
+openai
+dotenv
+pillow
+langchain_community
+langchain
