@@ -2,6 +2,7 @@
 
 This project allows you to control your laptop using **voice commands in English**.  
 It uses the [Whisper](https://openai.com/index/whisper/) speech recognition library and Python.
+It uses the ElevenLabs agent to use the voice rec system
 
 ---
 
